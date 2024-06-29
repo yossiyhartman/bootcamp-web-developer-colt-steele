@@ -1,0 +1,25 @@
+
+
+body {
+    background-color: #2C3E50;
+    display: flex;
+    justify-content: center;
+}
+
+.fancy-button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-self: center;
+    border:2px solid #D35400;
+    background-color: #2C3E50;
+    padding: 10px 20px;
+    color:#D35400;
+    transition: all 100ms ease-out;
+}
+
+.fancy-button:hover {
+    border-color:#F1C40F;
+    color:white ;
+    transform:translateY(-3px);
+    box-shadow: 0px 5px 15px #F1C40F55;
+    cursor: pointer;
+}
