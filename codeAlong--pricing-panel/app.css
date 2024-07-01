@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --blue: #1e90ff;
+    --blue-secondary: #016ff9;
+    --light-blue: #e1f1ff;
+    --light-blue-secondary: #9dd1ff;
+    --white: #ffffff;
+    --grey:#888888;
+  }
+
+html {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.pricing-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 10px;
+    max-width: 960px;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.pricing-plan {
+    border-bottom: 1px solid var(--light-blue);
+}
+
+.pricing-plan:last-child {
+    border-bottom: none;
+}
+
+.pricing-plan .pricing-img {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.pricing-plan .pricing-header {
+    color: var(--grey);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.pricing-plan .pricing-features {
+    color: var(--blue-secondary);
+    margin: 50px 0 25px;
+}
+
+
+.pricing-plan .pricing-features .pricing-features-item {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 15px 0;
+    border-top: 1px solid var(--light-blue);
+}
+
+.pricing-plan .pricing-features .pricing-features-item:last-child {
+    border-bottom: 1px solid var(--light-blue);
+}
+
+.pricing-plan .pricing-price {
+    color: var(--blue-secondary);
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.pricing-plan .pricing-button {
+    border-radius: 10px;
+    border: 1px solid ;
+    color: var(--blue);
+    padding: 15px 35px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 25px 0;
+    transition: background-color 200ms ease-out;
+}
+
+.pricing-plan .pricing-button:hover, .pricing-plan .pricing-button:focus {
+    background-color: #e1f1ff;
+}
+
+.pricing-plan .pricing-button.is-featured {
+    background-color: #48aaff;
+    color: white;
+}
+
+.pricing-plan .pricing-button.is-featured:hover {
+    background-color: #269eff;
+    color: white;
+}
+
+
+@media (min-width: 900px) {
+    .pricing-table {
+        flex-direction: row;
+    }
+
+    .pricing-plan {
+        border-bottom: none;
+        border-right: 1px solid var(--light-blue);
+        padding: 0 50px;
+        margin: 25px 0;
+    }
+
+    .pricing-plan:last-child {
+        border-right:none;
+    }
+}
