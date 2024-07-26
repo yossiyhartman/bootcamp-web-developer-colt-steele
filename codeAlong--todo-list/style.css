@@ -1,0 +1,38 @@
+
+* {
+    list-style: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.container {
+    margin-top: 10%;
+    line-height: 2.5rem;
+    font-size: 1rem;
+}
+
+.green {
+    color: darkgreen;
+}
+
+.red {
+    color: darkred;
+}
+
+.orange {
+    color: darkorange;
+}
+
+.purple {
+    color: purple;
+}
