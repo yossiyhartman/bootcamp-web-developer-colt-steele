@@ -1,0 +1,108 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    font-family: "Nova Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(246, 214, 176);
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1em;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cover {
+    background: bottom / cover no-repeat url('https://images.unsplash.com/photo-1630610280030-da8fbc7ca25a?q=80&w=474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') green;
+    height: 240px;
+}
+
+.title {
+    font-size: 1rem;
+    border-bottom: 1px solid #d0d0d0;
+    padding: 8px 10px;
+    font-weight: 200;
+}
+
+.score-container .score {
+    font-size: 2rem;
+    margin-top: 1rem;
+    padding: 0px 15px;
+}
+
+.won {
+    color: rgb(31, 96, 31);
+}
+
+.lost {
+    color: rgb(221, 54, 54);
+}
+
+p {
+    font-size: .8rem;
+    padding: 0px 15px;
+}
+
+.games-label {
+    display: block;
+    font-size: 1rem;
+    margin-top: 10px;
+    padding: 0px 15px;
+    font-weight: 600;
+}
+
+.games {
+    border-radius: 5px;
+}
+
+.control-container {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.control-button {
+    width: 100%;
+    padding: 12px 0;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    color:white;
+}
+
+.control-button:disabled {
+    pointer-events: none;
+    opacity: .4;
+}
+
+.control-button#p1-button {
+    background-color: rgb(95, 203, 95);
+}
+.control-button#p2-button {
+    background-color: rgb(91, 183, 214);
+}
+.control-button#reset-button {
+    background-color: rgb(247, 82, 82);
+}
+
+.control-button:hover {
+    opacity: .85;
+}
