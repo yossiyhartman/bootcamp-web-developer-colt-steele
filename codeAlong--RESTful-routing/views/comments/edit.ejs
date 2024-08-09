@@ -1,0 +1,20 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>New comment</title>
+	</head>
+	<body>
+		<h1>Edit comment:</h1>
+		<form action="/comments/<%= item.id %>?_method=PATCH" method="post">
+			<label for="comment"><b>Comment</b></label>
+			<br />
+			<br />
+			<textarea name="comment" id="comment" rows="10" cols="40"><%= item.comment %></textarea>
+			<br />
+			<br />
+			<button>Edit comment</button>
+		</form>
+		<a href="/comments">Get back to comments</a>
+	</body>
+</html>

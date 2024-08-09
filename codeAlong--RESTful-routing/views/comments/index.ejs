@@ -1,0 +1,22 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Comments</title>
+	</head>
+	<body>
+		<h1>Welcome to the comments page</h1>
+
+		<ul>
+			<% for(let c of comments ) { %>
+			<li>
+				<b><%= c.username %></b> - <%= c.comment %> -
+				<a style="color: rgb(0, 107, 169)" href="/comments/<%= c.id %>">details</a>
+				<a style="color: rgb(224, 135, 40)" href="/comments/<%= c.id %>/edit">edit</a>
+			</li>
+			<% } %>
+		</ul>
+
+		<a href="/comments/new">post a new comment</a>
+	</body>
+</html>
