@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Product index</title>
+		<style>
+			li,
+			a,
+			button,
+			span {
+				font-size: 16px;
+			}
+
+			button {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				outline: 0;
+				color: rgba(255, 0, 0, 0.75);
+				background-color: transparent;
+				cursor: pointer;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<h1><%= farm.name %>'s page</h1>
+		<ul>
+			<li>city: <%= farm.city %></li>
+			<li>email: <%= farm.email %></li>
+		</ul>
+		<h2>producing:</h2>
+		<ul>
+			<% for(let product of farm.products) { %>
+			<li><%= product.name %></li>
+			<%}%>
+		</ul>
+		<div>
+			<a style="color: rgb(6, 83, 151)" href="/farms"> Back to overview</a>
+			<span>/</span>
+			<a style="color: rgb(243, 165, 8)" href="/farms/<%=farm.id%>/products/new">add product</a>
+		</div>
+	</body>
+</html>

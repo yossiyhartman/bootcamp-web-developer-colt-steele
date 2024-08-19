@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Product index</title>
+		<style>
+			li {
+				width: 100%;
+				max-width: 250px;
+				display: flex;
+				justify-content: space-between;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Farms index</h1>
+		<ul>
+			<!-- add all products -->
+			<% for (const farm of farms) { %>
+			<li>
+				<i><%= farm.name%></i>
+				<div>
+					<a style="color: rgb(6, 83, 151)" href="/farms/<%=farm.id%>"> Details</a>
+				</div>
+			</li>
+			<% } %>
+		</ul>
+
+		<a href="/farms/new">Add a farm</a>
+	</body>
+</html>

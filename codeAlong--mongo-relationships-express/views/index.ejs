@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Product index</title>
+		<style>
+			li {
+				width: 100%;
+				max-width: 250px;
+				display: flex;
+				justify-content: space-between;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Product index</h1>
+		<ul>
+			<!-- add all products -->
+			<% for (const product of products) { %>
+			<li>
+				<i><%= product.name%></i>
+				<div>
+					<a style="color: rgb(6, 83, 151)" href="/products/<%=product.id%>"> Details</a>
+					<span>/</span>
+					<a style="color: rgb(243, 165, 8)" href="/products/<%=product.id%>/edit"
+						>Edit</a
+					>
+				</div>
+			</li>
+			<% } %>
+		</ul>
+
+		<a href="/products/new">Add a product</a>
+	</body>
+</html>

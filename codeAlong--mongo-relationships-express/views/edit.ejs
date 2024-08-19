@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			button,
+			label,
+			input,
+			select,
+			a {
+				display: block;
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Update <%= product.name %></h1>
+		<form action="/products/<%=product.id%>/edit?_method=PATCH" method="POST">
+			<label for="productName">Name</label>
+			<input
+				value="<%= product.name %>"
+				name="productName"
+				id="productName"
+				type="text"
+				required
+			/>
+			<label for="productPrice">Price</label>
+			<input
+				value="<%= product.price %>"
+				name="productPrice"
+				id="productPrice"
+				type="number"
+				step="0.01"
+				required
+			/>
+			<label for="productCategory">Category</label>
+			<select name="productCategory" id="productCategory" required>
+				<option <%= product.category == 'fruit' ? 'selected' : '' %> value="fruit">Fruit</option>
+				<option <%= product.category == 'vegetable' ? 'selected' : '' %> value="vegetable">Vegetable</option>
+				<option <%= product.category == 'dairy' ? 'selected' : '' %> value="dairy">Dairy</option>
+			</select>
+			<button>Update product</button>
+		</form>
+
+            <a style="color: rgb(6, 83, 151)" href="/products/<%=product.id%>"> back to details</a>
+	</body>
+</html>
