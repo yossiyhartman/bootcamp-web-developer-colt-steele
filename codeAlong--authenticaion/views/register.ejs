@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="flex justify-center items-start h-screen bg-slate-50">
+
+        <form class="grow-0 shrink-0 w-72 rounded-xl p-5 shadow-md translate-y-20 border bg-white" action="/register" method="post">
+            <h1 class="text-xl font-bold uppercase text-indigo-800">Register</h1>
+            <label class="text-sm block mt-4" for="username" >Username</label>
+            <input class="ring-1 rounded-sm ring-black w-full mt-2 min-h-7 text-gray-500 text-xs pl-4 focus:ring-indigo-400" id="username" name="username" type="text" placeholder="#### ...">
+            <label class="text-sm block mt-4" for="password" >Password</label>
+            <input class="ring-1 rounded-sm ring-black w-full mt-2 min-h-7 text-gray-500 text-xs pl-4 focus:ring-indigo-400" id="password" name="password" type="text" placeholder="#### ...">
+
+            <button class="text-sm block bg-indigo-400 hover:bg-indigo-500 text-white py-1 px-5 mt-6 rounded-md font-medium">Register</button>
+        </form>
+
+	</body>
+</html>
